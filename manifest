@@ -60,6 +60,7 @@ export PACKAGES="\
 	gzip \
 	haveged \
 	htop \
+	iio-sensor-proxy \
 	intel-gpu-tools \
 	intel-media-driver \
 	intel-ucode \
