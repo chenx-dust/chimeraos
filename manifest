@@ -190,8 +190,8 @@ export PACKAGES="\
 "
 
 export PACKAGE_OVERRIDES="\
-	https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.6.10-chos1-2/linux-chimeraos-6.6.10.chos1-2-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.6.10-chos1-2/linux-chimeraos-headers-6.6.10.chos1-2-x86_64.pkg.tar.zst \
+	https://github.com/3003n/linux-chimeraos/releases/download/v6.6.14-chos1-3/linux-chimeraos-6.6.14.chos1-3-x86_64.pkg.tar.zst \
+	https://github.com/3003n/linux-chimeraos/releases/download/v6.6.14-chos1-3/linux-chimeraos-headers-6.6.14.chos1-3-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.5-chos1-1/lib32-libva-mesa-driver-1--23.3.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.5-chos1-1/lib32-mesa-1--23.3.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.5-chos1-1/lib32-mesa-vdpau-1--23.3.5.chos1-1-x86_64.pkg.tar.zst \
@@ -298,11 +298,16 @@ postinstallhook() {
 	# Add sudo permissions
 	sed -i '/%wheel ALL=(ALL:ALL) ALL/s/^# //g' /etc/sudoers
 	echo "${USERNAME} ALL=(ALL) NOPASSWD: /usr/bin/dmidecode -t 11
-	" >/etc/sudoers.d/steam
+" >/etc/sudoers.d/steam
 	echo "${USERNAME} ALL=(ALL) NOPASSWD: /usr/bin/chimera-session-use-gamescope
-	${USERNAME} ALL=(ALL) NOPASSWD: /usr/bin/chimera-session-use-lightdm
-	${USERNAME} ALL=(ALL) NOPASSWD: /usr/share/chimera/bin/power-tool
-	" >/etc/sudoers.d/chimera
+${USERNAME} ALL=(ALL) NOPASSWD: /usr/bin/chimera-session-use-lightdm
+${USERNAME} ALL=(ALL) NOPASSWD: /usr/share/chimera/bin/power-tool
+" >/etc/sudoers.d/chimera
+	echo "${USERNAME} ALL=(ALL) NOPASSWD:ALL" > "/etc/sudoers.d/${USERNAME}"
+
+	echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+" >/etc/zshrc
 
 	# disable retroarch menu in joypad configs
 	find /usr/share/libretro/autoconfig -type f -name '*.cfg' | xargs -d '\n' sed -i '/input_menu_toggle_btn/d'
@@ -315,10 +320,10 @@ postinstallhook() {
 	popd
 
 	# Remove build tools for slimmer image
-	rm /usr/share/libalpm/hooks/70-dkms-install.hook
-	rm /usr/share/libalpm/hooks/70-dkms-upgrade.hook
-	rm /usr/share/libalpm/hooks/71-dkms-remove.hook
-	pacman --noconfirm -Rnsdd make gcc dkms ${KERNEL_PACKAGE}-headers
+	# rm /usr/share/libalpm/hooks/70-dkms-install.hook
+	# rm /usr/share/libalpm/hooks/70-dkms-upgrade.hook
+	# rm /usr/share/libalpm/hooks/71-dkms-remove.hook
+	# pacman --noconfirm -Rnsdd make gcc dkms ${KERNEL_PACKAGE}-headers
 
 	# remove dolphin standalone emulator files (only need /usr/share/dolphin-emu/sys)
 	rm /usr/bin/dolphin-emu
