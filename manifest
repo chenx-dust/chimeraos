@@ -255,7 +255,6 @@ export SERVICES="\
 
 export USER_SERVICES="\
 	pipewire \
-	steam-patch.service \
 "
 
 export FILES_TO_DELETE="\
