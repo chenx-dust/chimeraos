@@ -133,7 +133,10 @@ echo "export EDITOR=/usr/bin/vim" >> /etc/bash.bashrc
 
 echo "[Autologin]
 User=${USERNAME}
-" > /etc/sddm.conf.d/00-autologin-user.conf
+Relogin=true
+[General]
+DisplayServer=wayland
+" > /etc/sddm.conf.d/00-preset.conf
 
 echo "${SYSTEM_NAME}" > /etc/hostname
 
