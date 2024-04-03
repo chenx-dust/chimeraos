@@ -133,7 +133,7 @@ echo "export EDITOR=/usr/bin/vim" >> /etc/bash.bashrc
 
 echo "[Autologin]
 User=${USERNAME}
-" > /etc/sddm/sddm.conf.d/00-autologin-user.conf
+" > /etc/sddm.conf.d/00-autologin-user.conf
 
 echo "${SYSTEM_NAME}" > /etc/hostname
 
