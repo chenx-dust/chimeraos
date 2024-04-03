@@ -101,7 +101,6 @@ export PACKAGES="\
 	libva-vdpau-driver \
 	libxcrypt-compat \
 	libxss \
-	lightdm \
 	linux-firmware \
 	liquidctl \
 	logrotate \
@@ -133,13 +132,13 @@ export PACKAGES="\
 	plasma-pa \
 	plasma-thunderbolt \
 	plasma-vault \
-	plasma-wayland-session \
 	podman \
 	pulsemixer \
 	python \
 	python-inotify-simple \
 	qtractor \
 	rsync \
+	sddm \
 	smbclient \
 	sof-firmware \
 	sshfs \
@@ -205,7 +204,6 @@ export PACKAGE_OVERRIDES="\
 # Which is often the same as the package name but it can be different.
 # Check on the AUR webpage if you are unsure
 export AUR_PACKAGES="\
-	asusctl \
 	antimicrox \
 	ayaneo-platform-dkms-git \
 	ayn-platform-dkms-git \
@@ -256,8 +254,8 @@ export SERVICES="\
 	haveged \
 	hhd@gamer \
 	home-swapfile.swap \
-	lightdm \
 	powerstation \
+	sddm \
 	sshd \
 	systemd-timesyncd \
 	swapfile \
