@@ -210,7 +210,6 @@ export AUR_PACKAGES="\
 	bmi160-aya-neo-dkms-git \
 	bmi260-dkms \
 	boxtron \
-	chimeraos-device-quirks-git \
 	downgrade \
 	evdev-keepalive \
 	frzr \

@@ -7,12 +7,12 @@ die() {
 	exit 1
 }
 
-CONF_FILE="/etc/sddm/sddm.conf.d/10-chimeraos-session.conf"
+CONF_FILE="/etc/sddm.conf.d/10-chimeraos-session.conf"
 SENTINEL_FILE="steamos-session-select"
 RETURN_SESSION_FILE="chimeraos-session-return"
 
 # For sanity this shipped file must be present, to ensure we're still on a normal-looking Chimeraos setup.
-CHECK_FILE="/etc/sddm/sddm.conf.d/10-chimeraos-session.conf"
+CHECK_FILE="/etc/sddm.conf.d/10-chimeraos-session.conf"
 
 session="${1:-gamescope-session-steam}"
 session_type="wayland"
@@ -63,10 +63,10 @@ fi
 # We use "plasma" as "desktop" to hook up to SteamOS's scripts
 case "$session" in
 plasma-wayland-persistent)
-	session_launcher="plasmawayland"
+	session_launcher="plasma"
 	;;
 plasma-x11-persistent)
-	session_launcher="plasma"
+	session_launcher="plasmax11"
 	;;
 desktop | plasma)
 	session_launcher="plasma-session-oneshot"
