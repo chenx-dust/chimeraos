@@ -8,9 +8,11 @@ SENTINEL_FILE="steamos-session-select"
 RETURN_SESSION_FILE="chimeraos-session-return"
 
 # If we proceed, execute this
-CHAINED_SESSION="/usr/bin/gnome-session"
+CHAINED_SESSION="/usr/bin/startplasma-wayland"
 # If we decide the sentinel is consumed, execute this command instead and fail
 RESTORE_SESSION=(/usr/lib/os-session-select) # No arguments restores the session
+
+STEAM_SESSION="gamescope-session-steam"
 
 # Find or check config return session
 function check_return()
@@ -30,7 +32,7 @@ function check_return()
         echo "$revert_value"
         ;;
       *)
-        echo "gamescope-session-steam-plus"
+        echo "$STEAM_SESSION"
         ;;
     esac
     rm "$RETURN_SESSION_FILE"
@@ -55,7 +57,7 @@ function check_sentinel()
     cd "$config_dir"
     sentinel_value="$(cat "$SENTINEL_FILE")"
     if [[ "$sentinel_value" == "wayland" ]]; then
-      echo "/usr/bin/gnome-session"
+      echo "/usr/bin/startplasma-wayland"
     else
       return 1
     fi
