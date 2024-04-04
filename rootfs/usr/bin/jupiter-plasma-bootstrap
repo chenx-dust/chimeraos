@@ -30,7 +30,7 @@ if [[ "${XDG_SESSION_TYPE}" = "wayland" ]]; then
   done
 
   # Then try to fix the config
-  kscreen-doctor output.eDP.rotation.right \
-    || kscreen-doctor output.eDP-1.rotation.right \
+  kscreen-doctor output.eDP.rotation.left \
+    || kscreen-doctor output.eDP-1.rotation.left \
     || true
 fi
