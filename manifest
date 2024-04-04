@@ -19,6 +19,7 @@ export PACKAGES="\
 	alsa-firmware \
 	alsa-utils \
 	amd-ucode \
+	ark \
 	bash-completion \
 	bluedevil \
 	breeze-gtk \
@@ -145,6 +146,7 @@ export PACKAGES="\
 	sudo \
 	tar \
 	tree \
+	ttf-droid \
 	ttf-liberation \
 	unace \
 	unrar \
@@ -195,8 +197,6 @@ export PACKAGE_OVERRIDES="\
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.4-chos1-1/vulkan-mesa-layers-1--24.0.4.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.4-chos1-1/vulkan-radeon-1--24.0.4.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.4-chos1-1/vulkan-swrast-1--24.0.4.chos1-1-x86_64.pkg.tar.zst \
-	https://archive.archlinux.org/repos/2024/04/03/extra/os/x86_64/pipewire-jack-1%3A1.0.4-4-x86_64.pkg.tar.zst \
-	https://steamdeck-packages.steamos.cloud/archlinux-mirror/jupiter-main/os/x86_64/steamdeck-kde-presets-0.21-1-any.pkg.tar.zst \
 "
 
 # Each entry is the clone url (https://aur.archlinux.org/{AUR_PACKAGE}.git)
