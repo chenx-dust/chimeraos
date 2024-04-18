@@ -19,51 +19,69 @@ export PACKAGES="\
 	alsa-firmware \
 	alsa-utils \
 	amd-ucode \
+	ark \
 	bash-completion \
+	bluedevil \
+	breeze-gtk \
 	broadcom-wl-dkms \
 	bzip2 \
+	cage \
 	cifs-utils \
 	cpupower \
 	diffutils \
 	dkms \
+	discover \
 	distrobox \
 	dmidecode \
 	dosbox \
+	dolphin \
+	dolphin-plugins \
 	efibootmgr \
-	epiphany \
 	ethtool \
 	evtest \
+	expect \
+	exfatprogs \
+	falkon \
+	fcitx5-im \
+	fcitx5-chinese-addons \
+	fcitx5-pinyin-zhwiki \
 	ffmpeg \
 	file \
 	ffmpegthumbnailer \
 	firejail \
 	flatpak \
+	flatpak-kcm \
 	fmt \
 	fuse-zip \
 	fuse2 \
 	fwupd \
+	gamescope \
 	git \
-	gnome-browser-connector \
-	gnome-console \
-	gnome-control-center \
-	gnome-disk-utility \
-	gnome-keyring \
-	gnome-menus \
-	gnome-session \
-	gnome-shell \
-	gnome-software \
-	gnome-system-monitor \
-	gnome-text-editor \
+	grml-zsh-config \
 	gst-plugin-pipewire \
 	gvfs-smb \
 	gvfs-nfs \
 	gzip \
 	haveged \
 	htop \
+	iio-sensor-proxy \
 	intel-gpu-tools \
 	intel-media-driver \
 	intel-ucode \
 	intel-undervolt \
+	jq \
+	kate \
+	kde-gtk-config \
+	kdeconnect \
+	kdeplasma-addons \
+	kfind \
+	kgamma \
+	kinfocenter \
+	konsole \
+	kpipewire \
+	kscreen \
+	ksshaskpass \
+	kwallet-pam \
 	less \
 	lib32-curl \
 	lib32-fontconfig \
@@ -81,41 +99,25 @@ export PACKAGES="\
 	lib32-vulkan-icd-loader \
 	libcurl-gnutls \
 	libidn11 \
-	libretro-beetle-pce-fast \
-	libretro-beetle-psx-hw \
-	libretro-citra \
-	libretro-desmume \
-	libretro-dolphin \
-	libretro-flycast \
-	libretro-genesis-plus-gx \
-	libretro-kronos \
-	libretro-mesen-s\
-	libretro-mgba \
-	libretro-mupen64plus-next \
-	libretro-nestopia \
-	libretro-picodrive \
-	libretro-ppsspp \
-	libretro-shaders-slang \
-	libretro-snes9x \
 	libva-intel-driver \
 	libva-vdpau-driver \
 	libxcrypt-compat \
 	libxss \
-	lightdm \
 	linux-firmware \
 	liquidctl \
 	logrotate \
 	lrzip \
-	loupe \
 	lshw \
+	maliit-keyboard \
 	mesa-demos \
 	modemmanager \
 	nano \
-	nautilus \
 	networkmanager \
 	nfs-utils \
+	noto-fonts-cjk \
 	noto-fonts-emoji \
 	nss-mdns \
+	onboard \
 	openal \
 	openrazer-daemon \
 	openssh \
@@ -124,14 +126,21 @@ export PACKAGES="\
 	pipewire-alsa \
 	pipewire-jack \
 	pipewire-pulse \
+	plasma-browser-integration \
+	plasma-desktop \
+	plasma-disks \
+	plasma-nm \
+	plasma-pa \
+	plasma-thunderbolt \
+	plasma-vault \
 	podman \
 	pulsemixer \
 	python \
 	python-inotify-simple \
 	python-notify2 \
 	qtractor \
-	retroarch \
 	rsync \
+	sddm \
 	smbclient \
 	sof-firmware \
 	sshfs \
@@ -139,6 +148,7 @@ export PACKAGES="\
 	sudo \
 	tar \
 	tree \
+	ttf-droid \
 	ttf-liberation \
 	unace \
 	unrar \
@@ -151,20 +161,28 @@ export PACKAGES="\
 	wget \
 	which \
 	wireplumber \
-	wqy-zenhei \
+	wqy-microhei \
 	xdg-desktop-portal \
-	xdg-desktop-portal-gnome \
+	xdg-desktop-portal-gtk \
+	xdg-desktop-portal-kde \
 	xdg-desktop-portal-wlr \
 	xdg-user-dirs-gtk \
 	xf86-video-amdgpu \
 	xorg-server \
+	xorg-server-xvfb \
+	xorg-xinit \
+	xsettingsd \
 	xz \
 	zip \
+	zsh \
+	zsh-autosuggestions \
+	zsh-completions \
+	zsh-syntax-highlighting \
 "
 
 export PACKAGE_OVERRIDES="\
-	https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.8.5-chos1-3/linux-chimeraos-6.8.5.chos1-3-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.8.5-chos1-3/linux-chimeraos-headers-6.8.5.chos1-3-x86_64.pkg.tar.zst \
+	https://github.com/3003n/linux-chimeraos/releases/download/v6.8.7.sk-chos1-1/linux-chimeraos-6.8.7.sk.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/3003n/linux-chimeraos/releases/download/v6.8.7.sk-chos1-1/linux-chimeraos-headers-6.8.7.sk.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-libva-mesa-driver-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-mesa-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-mesa-vdpau-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
@@ -182,48 +200,41 @@ export PACKAGE_OVERRIDES="\
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-mesa-layers-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-radeon-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-nouveau-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-swrast-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://archive.archlinux.org/repos/2023/06/28/extra/os/x86_64/libretro-pcsx2-11900-2-x86_64.pkg.tar.zst \
-	https://archive.archlinux.org/packages/l/libretro-mame/libretro-mame-85763-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-swrast-1--24.0.5.chos1-1-x86_64.pkg.tar.zst
 "
 
 # Each entry is the clone url (https://aur.archlinux.org/{AUR_PACKAGE}.git)
 # Which is often the same as the package name but it can be different.
 # Check on the AUR webpage if you are unsure
 export AUR_PACKAGES="\
-	asusctl \
 	antimicrox \
 	ayaneo-platform-dkms-git \
 	ayn-platform-dkms-git \
 	bcm20702a1-firmware \
+	bmi160-aya-neo-dkms-git \
+	bmi260-dkms \
 	boxtron \
-	chimera \
-	chimeraos-device-quirks-git \
 	downgrade \
 	evdev-keepalive \
 	frzr \
 	gamescope-plus \
 	gamescope-session-steam-git \
 	gamescope-session-steam-plus-git \
+	hhd \
+	hhd-user \
 	hhfc-git \
 	inputplumber-bin \
 	legendary \
-	lib32-gamescope-plus \
 	lib32-gperftools \
-	libretro-dosbox-pure-git \
-	libretro-opera-git \
-	libretro-prosystem-git \
-	libretro-stella2014-git \
-	libretro-virtualjaguar-git \
 	kanit-font \
 	nintendo-udev \
 	opengamepadui-bin \
 	opengamepadui-session-git \
-	pikaur \
+	paru-bin \
 	powerstation-bin \
+	protonup-qt-bin \
 	python-vdf \
 	r8152-dkms \
-	retroarch-autoconfig-udev-git \
 	rtl8812au-dkms-git \
 	rtl8814au-dkms-git \
 	rtl88x2bu-dkms-git \
@@ -233,6 +244,9 @@ export AUR_PACKAGES="\
         steam-powerbuttond-git \
 	steam-removable-media-git \
 	wyvern \
+	waydroid \
+	waydroid-script-git \
+	wlr-randr \
 	zenergy-dkms-git \
 "
 
@@ -243,20 +257,21 @@ export SERVICES="\
 	bluetooth-workaround \
 	fstrim.timer \
 	haveged \
+	hhd@gamer \
 	home-swapfile.swap \
 	inputplumber \
 	lightdm \
 	powerstation \
-        steam-powerbuttond \
+	sddm \
+	steam-powerbuttond \
 	sshd \
 	systemd-timesyncd \
 	swapfile \
+	waydroid-container \
 "
 
 export USER_SERVICES="\
-	chimera.service \
 	pipewire \
-	steam-patch.service \
 "
 
 export FILES_TO_DELETE="\
@@ -265,24 +280,17 @@ export FILES_TO_DELETE="\
 	/usr/share/doc \
 	/usr/share/gtk-doc \
 	/usr/share/help \
-	/usr/share/libretro/autoconfig/udev/Gasia_PS_Gamepad_USB.cfg \
-	/usr/share/libretro/autoconfig/udev/Sony-PlayStation3-DualShock3-Controller-Bluetooth.cfg \
-	/usr/share/libretro/autoconfig/udev/Xbox_360_Wireless_Receiver_Chinese01.cfg \
 	/usr/share/man \
 "
 
 postinstallhook() {
 	# Add sudo permissions
 	sed -i '/%wheel ALL=(ALL:ALL) ALL/s/^# //g' /etc/sudoers
-	echo "${USERNAME} ALL=(ALL) NOPASSWD: /usr/bin/dmidecode -t 11
-	" >/etc/sudoers.d/steam
-	echo "${USERNAME} ALL=(ALL) NOPASSWD: /usr/bin/chimera-session-use-gamescope
-	${USERNAME} ALL=(ALL) NOPASSWD: /usr/bin/chimera-session-use-lightdm
-	${USERNAME} ALL=(ALL) NOPASSWD: /usr/share/chimera/bin/power-tool
-	" >/etc/sudoers.d/chimera
+	echo "${USERNAME} ALL=(ALL) NOPASSWD:ALL" > "/etc/sudoers.d/${USERNAME}"
 
-	# disable retroarch menu in joypad configs
-	find /usr/share/libretro/autoconfig -type f -name '*.cfg' | xargs -d '\n' sed -i '/input_menu_toggle_btn/d'
+	echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+" >>/etc/zsh/zshrc
 
 	# download and add racing wheel udev rules
 	pushd /usr/lib/udev/rules.d
@@ -292,32 +300,13 @@ postinstallhook() {
 	popd
 
 	# Remove build tools for slimmer image
-	rm /usr/share/libalpm/hooks/70-dkms-install.hook
-	rm /usr/share/libalpm/hooks/70-dkms-upgrade.hook
-	rm /usr/share/libalpm/hooks/71-dkms-remove.hook
-	pacman --noconfirm -Rnsdd make gcc dkms ${KERNEL_PACKAGE}-headers
-
-	# remove dolphin standalone emulator files (only need /usr/share/dolphin-emu/sys)
-	rm /usr/bin/dolphin-emu
-	rm /usr/bin/dolphin-emu-nogui
-	# dolphin-tool is no longer created in new builds?
-	#rm /usr/bin/dolphin-tool
-	rm /usr/share/applications/dolphin-emu.desktop
+	# rm /usr/share/libalpm/hooks/70-dkms-install.hook
+	# rm /usr/share/libalpm/hooks/70-dkms-upgrade.hook
+	# rm /usr/share/libalpm/hooks/71-dkms-remove.hook
+	# pacman --noconfirm -Rnsdd make gcc dkms ${KERNEL_PACKAGE}-headers
 
 	# clean up desktop shortcuts
 	sed -i -e 's/Name=Steam (Runtime)/Name=Steam/' /usr/share/applications/steam.desktop
-	find /usr/share/applications/* |
-		grep -v org.chimeraos.Gamescope.desktop |
-		grep -v org.chimeraos.app.desktop |
-		grep -v org.gnome.Console.desktop |
-		grep -v org.gnome.DiskUtility.desktop |
-		grep -v org.gnome.FileRoller.desktop |
-		grep -v org.gnome.Nautilus.desktop |
-		grep -v org.gnome.Settings.desktop |
-		grep -v org.gnome.Software.desktop |
-		grep -v org.gnome.TextEditor.desktop |
-		grep -v steam.desktop |
-		xargs -I {} sh -c "echo NoDisplay=true >> {}"
 
 	# force -steamdeck option in desktop mode to prevent constant steam updates
 	sed -i 's,Exec=/usr/bin/steam-runtime,Exec=/usr/bin/steam-runtime -steamdeck,' /usr/share/applications/steam.desktop

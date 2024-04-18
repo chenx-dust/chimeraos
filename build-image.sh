@@ -125,15 +125,18 @@ passwd --lock root
 
 # create user
 groupadd -r autologin
-useradd -m ${USERNAME} -G autologin,wheel,plugdev
+useradd -m ${USERNAME} -G autologin,wheel,plugdev,i2c,input -s /usr/bin/zsh
 echo "${USERNAME}:${USERNAME}" | chpasswd
 
 # set the default editor, so visudo works
 echo "export EDITOR=/usr/bin/vim" >> /etc/bash.bashrc
 
-echo "[Seat:*]
-autologin-user=${USERNAME}
-" > /etc/lightdm/lightdm.conf.d/00-autologin-user.conf
+echo "[Autologin]
+User=${USERNAME}
+Relogin=true
+[General]
+DisplayServer=wayland
+" > /etc/sddm.conf.d/00-preset.conf
 
 echo "${SYSTEM_NAME}" > /etc/hostname
 

@@ -1,0 +1,5 @@
+#! /bin/bash
+
+sed -i "/Session/c\Session=$1" /etc/sddm.conf.d/10-chimeraos-session.conf
+systemctl enable sddm
+setsid sh -c 'exec systemctl restart sddm <> /dev/tty6 >&0 2>&1'
