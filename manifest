@@ -259,7 +259,6 @@ export SERVICES="\
 	hhd@gamer \
 	home-swapfile.swap \
 	inputplumber \
-	lightdm \
 	powerstation \
 	sddm \
 	steam-powerbuttond \
