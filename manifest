@@ -81,7 +81,7 @@ export PACKAGES="\
 	kpipewire \
 	kscreen \
 	ksshaskpass \
-	kwalletmanager
+	kwalletmanager \
 	kwallet-pam \
 	less \
 	lib32-curl \
