@@ -294,5 +294,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 	# clean up desktop shortcuts
 	sed -i -e 's/Name=Steam (Runtime)/Name=Steam/' /usr/share/applications/steam.desktop
 
+	# use script to fix steam input in wayland mode
 	sed -i 's,Exec=/usr/bin/steam-runtime,Exec=/usr/bin/steam-desktop-mode,' /usr/share/applications/steam.desktop
+	sed -i 's,Exec=/usr/bin/steam,Exec=/usr/bin/steam-desktop-mode,' /etc/xdg/autostart/steam.desktop
 }
