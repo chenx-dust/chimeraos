@@ -65,6 +65,10 @@ export PACKAGES="\
 	haveged \
 	htop \
 	iio-sensor-proxy \
+	intel-gpu-tools \
+	intel-media-driver \
+	intel-ucode \
+	intel-undervolt \
 	jq \
 	kate \
 	kde-gtk-config \
@@ -88,6 +92,7 @@ export PACKAGES="\
 	lib32-libxinerama \
 	lib32-libxcrypt-compat \
 	lib32-libva \
+	lib32-libva-intel-driver \
 	lib32-libva-vdpau-driver \
 	lib32-openal \
 	lib32-pipewire \
@@ -97,6 +102,7 @@ export PACKAGES="\
 	libcurl-gnutls \
 	libidn11 \
 	libva-vdpau-driver \
+	libva-intel-driver \
 	libxcrypt-compat \
 	libxss \
 	linux-firmware \
@@ -179,15 +185,19 @@ export PACKAGE_OVERRIDES="\
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-mesa-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-mesa-vdpau-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-opencl-rusticl-mesa-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-vulkan-intel-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-vulkan-mesa-layers-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-vulkan-radeon-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-vulkan-nouveau-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-vulkan-swrast-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/libva-mesa-driver-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/mesa-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/mesa-vdpau-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/opencl-rusticl-mesa-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-intel-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-mesa-layers-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-radeon-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-nouveau-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-swrast-1--24.0.5.chos1-1-x86_64.pkg.tar.zst
 "
 
@@ -297,4 +307,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 	# use script to fix steam input in wayland mode
 	sed -i 's,Exec=/usr/bin/steam-runtime,Exec=/usr/bin/steam-desktop-mode,' /usr/share/applications/steam.desktop
 	sed -i 's,Exec=/usr/bin/steam,Exec=/usr/bin/steam-desktop-mode,' /etc/xdg/autostart/steam.desktop
+
+	# set permissions for intel_gpu_top and mangohud
+	setcap cap_perfmon=+ep /usr/bin/intel_gpu_top
 }
