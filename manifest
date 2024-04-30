@@ -294,6 +294,5 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 	# clean up desktop shortcuts
 	sed -i -e 's/Name=Steam (Runtime)/Name=Steam/' /usr/share/applications/steam.desktop
 
-	# force -steamdeck option in desktop mode to prevent constant steam updates
-	sed -i 's,Exec=/usr/bin/steam-runtime,Exec=/usr/bin/steam-runtime -steamdeck,' /usr/share/applications/steam.desktop
+	sed -i 's,Exec=/usr/bin/steam-runtime,Exec=/usr/bin/steam-desktop-mode,' /usr/share/applications/steam.desktop
 }
