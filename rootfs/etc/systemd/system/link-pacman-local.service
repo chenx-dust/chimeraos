@@ -1,0 +1,10 @@
+[Unit]
+Description=Create Soft Link for Pacman Local
+
+[Service]
+Type=oneshot
+RemainAfterExit=no
+ExecStart=/usr/bin/link-pacman-local
+
+[Install]
+WantedBy=multi-user.target

@@ -41,8 +41,9 @@ export PACKAGES="\
 	evtest \
 	expect \
 	exfatprogs \
-	fcitx5-im \
+	fcitx5-breeze \
 	fcitx5-chinese-addons \
+	fcitx5-im \
 	fcitx5-pinyin-zhwiki \
 	ffmpeg \
 	ffmpegthumbnailer \
@@ -198,14 +199,13 @@ export PACKAGE_OVERRIDES="\
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-mesa-layers-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-radeon-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-nouveau-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-swrast-1--24.0.5.chos1-1-x86_64.pkg.tar.zst
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-swrast-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
 "
 
 # Each entry is the clone url (https://aur.archlinux.org/{AUR_PACKAGE}.git)
 # Which is often the same as the package name but it can be different.
 # Check on the AUR webpage if you are unsure
 export AUR_PACKAGES="\
-	antimicrox \
 	ayaneo-platform-dkms-git \
 	ayn-platform-dkms-git \
 	bcm20702a1-firmware \
@@ -216,7 +216,6 @@ export AUR_PACKAGES="\
 	evdev-keepalive \
 	frzr \
 	gamescope-session-steam-git \
-	gamescope-session-steam-plus-git \
 	hhd \
 	hhd-user \
 	hhfc-git \
@@ -225,11 +224,7 @@ export AUR_PACKAGES="\
 	lib32-gperftools \
 	kanit-font \
 	nintendo-udev \
-	opengamepadui-bin \
-	opengamepadui-session-git \
 	paru-bin \
-	powerstation-bin \
-	python-gbopyrator \
 	protonup-qt-bin \
 	python-vdf \
 	r8152-dkms \
@@ -257,7 +252,6 @@ export SERVICES="\
 	haveged \
 	hhd@gamer \
 	home-swapfile.swap \
-	powerstation \
 	sddm \
 	steam-powerbuttond \
 	sshd \

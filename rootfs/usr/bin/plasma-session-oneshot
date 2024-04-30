@@ -28,7 +28,7 @@ function check_return()
     cd "$config_dir"
     revert_value="$(cat "$RETURN_SESSION_FILE")"
     case "$revert_value" in
-      gamescope-session-opengamepadui|gamescope-session-steam-plus|gamescope-session-steam)
+      gamescope-session-steam)
         echo "$revert_value"
         ;;
       *)

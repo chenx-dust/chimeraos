@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ ! -d /usr/var/lib/pacman/local ]; then]
+    mkdir -p /var/lib/pacman
+    ln -s /usr/var/lib/pacman/local /var/lib/pacman/
+fi

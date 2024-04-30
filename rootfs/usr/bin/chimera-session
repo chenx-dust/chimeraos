@@ -4,7 +4,7 @@ DATA_HOME=${XDG_DATA_HOME:-$HOME/.local/share}
 CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
 SESSION_CONFIG="${CONFIG_HOME}/environment.d/01-chimera-session.conf"
 SESSION_SDDM_CONFIG="/etc/sddm.conf.d/10-chimeraos-session.conf"
-SESSION_LIST=('desktop' 'desktop-xorg' 'steam' 'steam-plus' 'opengamepadui')
+SESSION_LIST=('desktop' 'desktop-xorg' 'steam')
 SELECTED_SESSION="$1"
 
 mkdir -p "${CONFIG_HOME}/environment.d"
@@ -22,14 +22,6 @@ function print_session_list() {
 
 	if grep "gamescope-session-steam" ${SESSION_SDDM_CONFIG} &> /dev/null; then
 		CURRENT_SESSION="steam"
-	fi
-
-	if grep "gamescope-session-steam-plus" ${SESSION_SDDM_CONFIG} &> /dev/null; then
-		CURRENT_SESSION="steam-plus"
-	fi
-
-	if grep "gamescope-session-opengamepadui" ${SESSION_SDDM_CONFIG} &> /dev/null; then
-		CURRENT_SESSION="opengamepadui"
 	fi
 
 	# print active and available sessions
@@ -65,21 +57,6 @@ function gamescope_steam() {
 	# switch to Steam Big Picture UI (Gamescope/Wayland)
 	echo '' > ${SESSION_CONFIG}
 	sudo chimera-session-use-sddm gamescope-session-steam
-	sudo systemctl enable --now inputplumber # remove when fully integrated into opengamepadui
-}
-
-function gamescope_opengamepadui() {
-	# switch to OpengamepadUI (Gamescope/Wayland)
-	echo '' > ${SESSION_CONFIG}
-	sudo chimera-session-use-sddm gamescope-session-opengamepadui
-	sudo systemctl disable --now inputplumber
-}
-
-function gamescope_steam_plus() {
-	# switch to Steam plus OpengamepadUI overlay (Gamescope/Wayland)
-	echo '' > ${SESSION_CONFIG}
-	sudo chimera-session-use-sddm gamescope-session-steam-plus
-	sudo systemctl disable --now inputplumber
 }
 
 function print_invalid_session() {
@@ -111,10 +88,4 @@ elif [ "${SELECTED_SESSION}" = "desktop-xorg" ]; then
 elif [ "${SELECTED_SESSION}" = "steam" ]; then
 	echo "Switching to steam session"
 	gamescope_steam
-elif [ "${SELECTED_SESSION}" = "opengamepadui" ]; then
-	echo "Switching to opengamepadui session"
-	gamescope_opengamepadui
-elif [ "${SELECTED_SESSION}" = "steam-plus" ]; then
-	echo "Switching to steam-plus session"
-	gamescope_steam_plus
 fi
