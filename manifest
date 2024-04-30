@@ -153,7 +153,7 @@ export PACKAGES="\
 	wget \
 	which \
 	wireplumber \
-	wqy-microhei \
+	wqy-zenhei \
 	xdg-desktop-portal \
 	xdg-desktop-portal-gtk \
 	xdg-desktop-portal-kde \
@@ -211,6 +211,7 @@ export AUR_PACKAGES="\
 	hhd-user \
 	hhfc-git \
 	legendary \
+	lib32-extest \
 	lib32-gperftools \
 	kanit-font \
 	nintendo-udev \
