@@ -12,62 +12,31 @@ export BUG_REPORT_URL="https://github.com/ChimeraOS/chimeraos/issues"
 export KERNEL_PACKAGE="linux-chimeraos"
 export KERNEL_PACKAGE_ORIGIN="local"
 
+# Chimera Self-Built Package
 export PACKAGES="\
-	chimera/linux-chimeraos \
-	chimera/linux-chimeraos-headers \
-	chimera/lib32-libva-mesa-driver \
-	chimera/lib32-mesa \
-	chimera/lib32-mesa-vdpau \
-	chimera/lib32-opencl-rusticl-mesa \
-	chimera/lib32-vulkan-intel \
-	chimera/lib32-vulkan-mesa-layers \
-	chimera/lib32-vulkan-radeon \
-	chimera/lib32-vulkan-nouveau \
-	chimera/lib32-vulkan-swrast \
-	chimera/libva-mesa-driver \
-	chimera/mesa \
-	chimera/mesa-vdpau \
-	chimera/opencl-rusticl-mesa \
-	chimera/vulkan-intel \
-	chimera/vulkan-mesa-layers \
-	chimera/vulkan-radeon \
-	chimera/vulkan-nouveau \
-	chimera/vulkan-swrast \
-	chimera/ayaneo-platform-dkms-git \
-	chimera/ayn-platform-dkms-git \
-	chimera/bcm20702a1-firmware \
-	chimera/bmi160-aya-neo-dkms-git \
-	chimera/bmi260-dkms \
-	chimera/boxtron \
-	chimera/downgrade \
-	chimera/evdev-keepalive \
-	chimera/frzr \
-	chimera/gamescope-session-steam-git \
-	chimera/hhd \
-	chimera/hhd-user \
-	chimera/hhfc-git \
-	chimera/legendary \
-	chimera/lib32-extest \
-	chimera/lib32-gperftools \
-	chimera/kanit-font \
-	chimera/nintendo-udev \
-	chimera/paru-bin \
-	chimera/protonup-qt-bin \
-	chimera/python-vdf \
-	chimera/r8152-dkms \
-	chimera/rtl8812au-dkms-git \
-	chimera/rtl8814au-dkms-git \
-	chimera/rtl88x2bu-dkms-git \
-	chimera/rtl8821au-dkms-git \
-	chimera/ryzenadj-git \
-	chimera/steam_notif_daemon \
-	chimera/steam-powerbuttond-git \
-	chimera/steam-removable-media-git \
-	chimera/wyvern \
-	chimera/waydroid \
-	chimera/waydroid-script-git \
-	chimera/wlr-randr \
-	chimera/zenergy-dkms-git \
+	linux-chimeraos \
+	linux-chimeraos-headers \
+	lib32-libva-mesa-driver \
+	lib32-mesa \
+	lib32-mesa-vdpau \
+	lib32-opencl-rusticl-mesa \
+	lib32-vulkan-intel \
+	lib32-vulkan-mesa-layers \
+	lib32-vulkan-radeon \
+	lib32-vulkan-nouveau \
+	lib32-vulkan-swrast \
+	libva-mesa-driver \
+	mesa \
+	mesa-vdpau \
+	opencl-rusticl-mesa \
+	vulkan-intel \
+	vulkan-mesa-layers \
+	vulkan-radeon \
+	vulkan-nouveau \
+	vulkan-swrast \
+"
+
+export PACKAGES="$PACKAGES \
 	accountsservice \
 	acpi_call-dkms \
 	alsa-firmware \
@@ -270,6 +239,7 @@ export AUR_PACKAGES="\
 	wlr-randr \
 	zenergy-dkms-git \
 "
+export PACKAGES="$PACKAGES $AUR_PACKAGES"
 
 export SERVICES="\
 	NetworkManager \

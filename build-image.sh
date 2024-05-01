@@ -79,13 +79,6 @@ sed -i '/ParallelDownloads/s/^/#/g' /etc/pacman.conf
 # Cannot check space in chroot
 sed -i '/CheckSpace/s/^/#/g' /etc/pacman.conf
 
-# Add custom chimera source
-echo "
-[chimera]
-SigLevel = Optional TrustAll
-Server = https://github.com/chenx-dust/chimera-repo/releases/download/latest/
-" >> /etc/pacman.conf
-
 # update package databases
 pacman --noconfirm -Syy
 
@@ -206,14 +199,6 @@ echo "${SYSTEM_NAME}-${VERSION}" > ${BUILD_PATH}/build_info
 echo "" >> ${BUILD_PATH}/build_info
 cat ${BUILD_PATH}/manifest >> ${BUILD_PATH}/build_info
 rm ${BUILD_PATH}/manifest
-
-# freeze archive date of build to avoid package drift on unlock
-# if no archive date is set
-if [ -z "${ARCHIVE_DATE}" ]; then
-	export TODAY_DATE=$(date +%Y/%m/%d)
-	echo "Server=https://archive.archlinux.org/repos/${TODAY_DATE}/\$repo/os/\$arch" > \
-	${BUILD_PATH}/etc/pacman.d/mirrorlist
-fi
 
 btrfs subvolume snapshot -r ${BUILD_PATH} ${SNAP_PATH}
 btrfs send -f ${SYSTEM_NAME}-${VERSION}.img ${SNAP_PATH}
