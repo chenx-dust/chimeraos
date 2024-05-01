@@ -271,6 +271,10 @@ export FILES_TO_DELETE="\
 "
 
 postinstallhook() {
+	# override steamos-update
+	mv /usr/bin/steamos-update /usr/bin/steamos-update.ori
+	ln -s /usr/bin/steamos-update-override /usr/bin/steamos-update
+
 	# Add sudo permissions
 	sed -i '/%wheel ALL=(ALL:ALL) ALL/s/^# //g' /etc/sudoers
 	echo "${USERNAME} ALL=(ALL) NOPASSWD:ALL" > "/etc/sudoers.d/${USERNAME}"
