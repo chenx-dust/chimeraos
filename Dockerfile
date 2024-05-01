@@ -1,6 +1,6 @@
 FROM archlinux:base-devel
 LABEL contributor="shadowapex@gmail.com"
-COPY rootfs/etc/pacman.conf /etc/pacman.conf
+COPY pacman.conf /etc/pacman.conf
 RUN echo -e "keyserver-options auto-key-retrieve" >> /etc/pacman.d/gnupg/gpg.conf && \
     # Cannot check space in chroot
     sed -i '/CheckSpace/s/^/#/g' /etc/pacman.conf && \
@@ -48,7 +48,6 @@ RUN sed -i '/BUILDENV/s/check/!check/g' /etc/makepkg.conf && \
 COPY manifest /manifest
 # Freeze packages and overwrite with overrides when needed
 RUN source /manifest && \
-    echo "Server = https://geo.mirror.pkgbuild.com/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist && \
     pacman --noconfirm -Syyuu; if [ -n "${PACKAGE_OVERRIDES}" ]; then wget --directory-prefix=/tmp/extra_pkgs ${PACKAGE_OVERRIDES}; pacman --noconfirm -U --overwrite '*' /tmp/extra_pkgs/*; rm -rf /tmp/extra_pkgs; fi
 
 USER build
