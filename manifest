@@ -235,6 +235,44 @@ export PACKAGES="\
 	zsh-syntax-highlighting \
 "
 
+export AUR_PACKAGES="\
+	ayaneo-platform-dkms-git \
+	ayn-platform-dkms-git \
+	bcm20702a1-firmware \
+	bmi160-aya-neo-dkms-git \
+	bmi260-dkms \
+	boxtron \
+	downgrade \
+	evdev-keepalive \
+	frzr \
+	gamescope-session-steam-git \
+	hhd \
+	hhd-user \
+	hhfc-git \
+	legendary \
+	lib32-extest \
+	lib32-gperftools \
+	kanit-font \
+	nintendo-udev \
+	paru-bin \
+	protonup-qt-bin \
+	python-vdf \
+	r8152-dkms \
+	rtl8812au-dkms-git \
+	rtl8814au-dkms-git \
+	rtl88x2bu-dkms-git \
+	rtl8821au-dkms-git \
+	ryzenadj-git \
+	steam_notif_daemon \
+	steam-powerbuttond-git \
+	steam-removable-media-git \
+	wyvern \
+	waydroid \
+	waydroid-script-git \
+	wlr-randr \
+	zenergy-dkms-git \
+"
+
 export SERVICES="\
 	NetworkManager \
 	avahi-daemon \
