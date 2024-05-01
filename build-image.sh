@@ -73,13 +73,6 @@ pacman-key --populate
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 locale-gen
 
-# Add custom chimera source
-echo "
-[chimera]
-SigLevel = Optional TrustAll
-Server = https://github.com/chenx-dust/chimera-repo/releases/download/latest/
-" >> /etc/pacman.conf
-
 # Disable parallel downloads
 sed -i '/ParallelDownloads/s/^/#/g' /etc/pacman.conf
 

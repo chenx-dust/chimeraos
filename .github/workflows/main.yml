@@ -12,7 +12,6 @@ on:
 
 jobs:
   build-docker-image:
-    name: Build and publish docker container
     uses: ./.github/workflows/build-builder.yml
 
   build-system-image:
