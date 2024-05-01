@@ -14,6 +14,63 @@ export KERNEL_PACKAGE="linux-chimeraos"
 export KERNEL_PACKAGE_ORIGIN="local"
 
 export PACKAGES="\
+	chimera/linux-chimeraos \
+	chimera/linux-chimeraos-headers \
+	chimera/lib32-libva-mesa-driver \
+	chimera/lib32-mesa \
+	chimera/lib32-mesa-vdpau \
+	chimera/lib32-opencl-rusticl-mesa \
+	chimera/lib32-vulkan-intel \
+	chimera/lib32-vulkan-mesa-layers \
+	chimera/lib32-vulkan-radeon \
+	chimera/lib32-vulkan-nouveau \
+	chimera/lib32-vulkan-swrast \
+	chimera/libva-mesa-driver \
+	chimera/mesa \
+	chimera/mesa-vdpau \
+	chimera/opencl-rusticl-mesa \
+	chimera/vulkan-intel \
+	chimera/vulkan-mesa-layers \
+	chimera/vulkan-radeon \
+	chimera/vulkan-nouveau \
+	chimera/vulkan-swrast \
+
+	chimera/ayaneo-platform-dkms-git \
+	chimera/ayn-platform-dkms-git \
+	chimera/bcm20702a1-firmware \
+	chimera/bmi160-aya-neo-dkms-git \
+	chimera/bmi260-dkms \
+	chimera/boxtron \
+	chimera/downgrade \
+	chimera/evdev-keepalive \
+	chimera/frzr \
+	chimera/gamescope-session-steam-git \
+	chimera/hhd \
+	chimera/hhd-user \
+	chimera/hhfc-git \
+	chimera/legendary \
+	chimera/lib32-extest \
+	chimera/lib32-gperftools \
+	chimera/kanit-font \
+	chimera/nintendo-udev \
+	chimera/paru-bin \
+	chimera/protonup-qt-bin \
+	chimera/python-vdf \
+	chimera/r8152-dkms \
+	chimera/rtl8812au-dkms-git \
+	chimera/rtl8814au-dkms-git \
+	chimera/rtl88x2bu-dkms-git \
+	chimera/rtl8821au-dkms-git \
+	chimera/ryzenadj-git \
+	chimera/steam_notif_daemon \
+	chimera/steam-powerbuttond-git \
+	chimera/steam-removable-media-git \
+	chimera/wyvern \
+	chimera/waydroid \
+	chimera/waydroid-script-git \
+	chimera/wlr-randr \
+	chimera/zenergy-dkms-git \
+
 	accountsservice \
 	acpi_call-dkms \
 	alsa-firmware \
@@ -177,70 +234,6 @@ export PACKAGES="\
 	zsh-autosuggestions \
 	zsh-completions \
 	zsh-syntax-highlighting \
-"
-
-export PACKAGE_OVERRIDES="\
-	https://github.com/3003n/linux-chimeraos/releases/download/v6.8.8.sk-chos1-1/linux-chimeraos-6.8.8.sk.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/3003n/linux-chimeraos/releases/download/v6.8.8.sk-chos1-1/linux-chimeraos-headers-6.8.8.sk.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-libva-mesa-driver-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-mesa-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-mesa-vdpau-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-opencl-rusticl-mesa-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-vulkan-intel-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-vulkan-mesa-layers-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-vulkan-radeon-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-vulkan-nouveau-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/lib32-vulkan-swrast-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/libva-mesa-driver-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/mesa-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/mesa-vdpau-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/opencl-rusticl-mesa-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-intel-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-mesa-layers-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-radeon-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-nouveau-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/24.0.5-chos1-1/vulkan-swrast-1--24.0.5.chos1-1-x86_64.pkg.tar.zst \
-"
-
-# Each entry is the clone url (https://aur.archlinux.org/{AUR_PACKAGE}.git)
-# Which is often the same as the package name but it can be different.
-# Check on the AUR webpage if you are unsure
-export AUR_PACKAGES="\
-	ayaneo-platform-dkms-git \
-	ayn-platform-dkms-git \
-	bcm20702a1-firmware \
-	bmi160-aya-neo-dkms-git \
-	bmi260-dkms \
-	boxtron \
-	downgrade \
-	evdev-keepalive \
-	frzr \
-	gamescope-session-steam-git \
-	hhd \
-	hhd-user \
-	hhfc-git \
-	legendary \
-	lib32-extest \
-	lib32-gperftools \
-	kanit-font \
-	nintendo-udev \
-	paru-bin \
-	protonup-qt-bin \
-	python-vdf \
-	r8152-dkms \
-	rtl8812au-dkms-git \
-	rtl8814au-dkms-git \
-	rtl88x2bu-dkms-git \
-	rtl8821au-dkms-git \
-	ryzenadj-git \
-	steam_notif_daemon \
-	steam-powerbuttond-git \
-	steam-removable-media-git \
-	wyvern \
-	waydroid \
-	waydroid-script-git \
-	wlr-randr \
-	zenergy-dkms-git \
 "
 
 export SERVICES="\

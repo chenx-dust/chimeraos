@@ -60,18 +60,6 @@ cp /etc/pacman.d/mirrorlist rootfs/etc/pacman.d/mirrorlist
 # copy files into chroot
 cp -R manifest rootfs/. ${BUILD_PATH}/
 
-mkdir ${BUILD_PATH}/own_pkgs
-mkdir ${BUILD_PATH}/extra_pkgs
-
-cp -rv aur-pkgs/*.pkg.tar* ${BUILD_PATH}/extra_pkgs
-cp -rv pkgs/*.pkg.tar* ${BUILD_PATH}/own_pkgs
-
-if [ -n "${PACKAGE_OVERRIDES}" ]; then
-	wget --directory-prefix=/tmp/extra_pkgs ${PACKAGE_OVERRIDES}
-	cp -rv /tmp/extra_pkgs/*.pkg.tar* ${BUILD_PATH}/own_pkgs
-fi
-
-
 # chroot into target
 mount --bind ${BUILD_PATH} ${BUILD_PATH}
 arch-chroot ${BUILD_PATH} /bin/bash <<EOF
@@ -84,6 +72,13 @@ pacman-key --populate
 
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 locale-gen
+
+# Add custom chimera source
+echo "
+[chimera]
+SigLevel = Optional TrustAll
+Server = https://github.com/chenx-dust/chimera-repo/releases/download/latest/
+" >> /etc/pacman.conf
 
 # Disable parallel downloads
 sed -i '/ParallelDownloads/s/^/#/g' /etc/pacman.conf
@@ -102,16 +97,8 @@ else
 	pacman --noconfirm -S "${KERNEL_PACKAGE}" "${KERNEL_PACKAGE}-headers"
 fi
 
-# install own override packages
-pacman --noconfirm -U --overwrite '*' /own_pkgs/*
-rm -rf /var/cache/pacman/pkg
-
 # install packages
 pacman --noconfirm -S --overwrite '*' --disable-download-timeout ${PACKAGES}
-rm -rf /var/cache/pacman/pkg
-
-# install AUR packages
-pacman --noconfirm -U --overwrite '*' /extra_pkgs/*
 rm -rf /var/cache/pacman/pkg
 
 # enable services
