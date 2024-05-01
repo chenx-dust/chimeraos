@@ -79,6 +79,13 @@ sed -i '/ParallelDownloads/s/^/#/g' /etc/pacman.conf
 # Cannot check space in chroot
 sed -i '/CheckSpace/s/^/#/g' /etc/pacman.conf
 
+# Add custom chimera source
+echo "
+[chimera]
+SigLevel = Optional TrustAll
+Server = https://github.com/chenx-dust/chimera-repo/releases/download/latest/
+" >> /etc/pacman.conf
+
 # update package databases
 pacman --noconfirm -Syy
 
