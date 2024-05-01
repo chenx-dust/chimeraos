@@ -33,7 +33,6 @@ export PACKAGES="\
 	chimera/vulkan-radeon \
 	chimera/vulkan-nouveau \
 	chimera/vulkan-swrast \
-
 	chimera/ayaneo-platform-dkms-git \
 	chimera/ayn-platform-dkms-git \
 	chimera/bcm20702a1-firmware \
@@ -69,7 +68,6 @@ export PACKAGES="\
 	chimera/waydroid-script-git \
 	chimera/wlr-randr \
 	chimera/zenergy-dkms-git \
-
 	accountsservice \
 	acpi_call-dkms \
 	alsa-firmware \
