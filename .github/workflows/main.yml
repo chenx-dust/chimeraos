@@ -2,7 +2,7 @@ name: System image build
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: chenx-dust/chimera-repo
+  IMAGE_NAME: ${{ github.repository }}
 
 on:
   push:
@@ -11,7 +11,13 @@ on:
   workflow_dispatch:
 
 jobs:
+  build-docker-image:
+    name: Build and publish docker container
+    uses: ./.github/workflows/build-builder.yml
+
   build-system-image:
+    needs:
+     - build-docker-image
     runs-on: ubuntu-latest
     permissions:
       contents: write
