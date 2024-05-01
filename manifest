@@ -213,9 +213,8 @@ export AUR_PACKAGES="\
 	evdev-keepalive \
 	frzr \
 	gamescope-session-steam-git \
-	hhd \
-	hhd-user \
 	hhfc-git \
+	inputplumber-bin \
 	legendary \
 	lib32-extest \
 	lib32-gperftools \
@@ -248,8 +247,8 @@ export SERVICES="\
 	bluetooth-workaround \
 	fstrim.timer \
 	haveged \
-	hhd@gamer \
 	home-swapfile.swap \
+	inputplumber \
 	sddm \
 	steam-powerbuttond \
 	sshd \
