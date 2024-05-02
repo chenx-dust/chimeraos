@@ -214,7 +214,7 @@ export AUR_PACKAGES="\
 	frzr \
 	gamescope-session-steam-git \
 	hhd \
-	hhd-user \
+	hhd-ui \
 	hhfc-git \
 	legendary \
 	lib32-extest \
@@ -231,7 +231,6 @@ export AUR_PACKAGES="\
 	rtl8821au-dkms-git \
 	ryzenadj-git \
 	steam_notif_daemon \
-	steam-powerbuttond-git \
 	steam-removable-media-git \
 	wyvern \
 	waydroid \
@@ -251,7 +250,6 @@ export SERVICES="\
 	hhd@gamer \
 	home-swapfile.swap \
 	sddm \
-	steam-powerbuttond \
 	sshd \
 	systemd-timesyncd \
 	swapfile \
