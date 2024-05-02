@@ -214,7 +214,6 @@ export AUR_PACKAGES="\
 	frzr \
 	gamescope-session-steam-git \
 	hhd \
-	hhd-ui \
 	hhfc-git \
 	legendary \
 	lib32-extest \
