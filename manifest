@@ -212,7 +212,7 @@ export AUR_PACKAGES="\
 	downgrade \
 	evdev-keepalive \
 	frzr \
-	gamescope-session-steam-git \
+	gamescope-session-git \
 	hhd \
 	hhfc-git \
 	legendary \
