@@ -1,10 +1,10 @@
 [Unit]
-Description=Create Soft Link for Pacman Local
+Description=Frzr Unlock Rootfs
 
 [Service]
 Type=oneshot
 RemainAfterExit=no
-ExecStart=/usr/bin/link-pacman-local
+ExecStart=/usr/bin/frzr-unlock
 
 [Install]
 WantedBy=multi-user.target
