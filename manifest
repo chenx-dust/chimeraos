@@ -79,7 +79,6 @@ export PACKAGES="$PACKAGES \
 	fuse-zip \
 	fuse2 \
 	fwupd \
-	gamescope \
 	git \
 	grml-zsh-config \
 	gst-plugin-pipewire \
@@ -212,7 +211,8 @@ export AUR_PACKAGES="\
 	downgrade \
 	evdev-keepalive \
 	frzr \
-	gamescope-session-git \
+	gamescope-sk \
+	gamescope-session-sk-git \
 	hhd \
 	hhfc-git \
 	legendary \
