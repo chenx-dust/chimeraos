@@ -215,6 +215,7 @@ export AUR_PACKAGES="\
 	gamescope-session-sk-git \
 	hhd \
 	hhfc-git \
+	ibus-pinyin \
 	legendary \
 	lib32-extest \
 	lib32-gperftools \
